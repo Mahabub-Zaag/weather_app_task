@@ -15,7 +15,7 @@ class CurrentWeatherScreen extends StatefulWidget {
 class _CurrentWeatherScreenState extends State<CurrentWeatherScreen> {
   final weatherController = Get.find<WeatherController>();
   final geolocationController = Get.find<GeolocationController>();
-  final RefreshController _refreshController =
+  RefreshController _refreshController =
       RefreshController(initialRefresh: false);
 
   _initCall() async {

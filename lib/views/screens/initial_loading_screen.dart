@@ -16,13 +16,13 @@ class _InitialLoadingScreenState extends State<InitialLoadingScreen> {
   final geolocationController = Get.find<GeolocationController>();
 
   _initCall() async {
-    geolocationController.getCurrentLocation();
+    await geolocationController.getCurrentLocation();
   }
 
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      _initCall();
+      await _initCall();
     });
     // TODO: implement initState
     super.initState();
